@@ -1,5 +1,3 @@
-# blog/__init__.py
-
 import os
 from flask import Flask
 from config import Config
@@ -16,8 +14,7 @@ from blog import routes, models
 
 @app.shell_context_processor
 def make_shell_context():
-  return {
-      "db": db,
-      "Entry": models.Entry
-  }
-
+    return {
+        "db": db,
+        "Entry": models.Entry
+    }
